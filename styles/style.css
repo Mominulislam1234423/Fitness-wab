@@ -146,6 +146,143 @@ p {
     font-weight: bold;
 }
 
+/* style Habits section */
+.Habits{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 70px;
+    text-align: center;
+}
+.Habits h1{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.habits-img{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+}
+.habits-img h3{
+     color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.habits-img img{
+    border-radius: 100%;
+}
+
+
+/* card section style */
+.run-card{
+    width: 80%;
+    margin: 0 auto;
+    background: #222222;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.card-img{
+    height: auto;
+    width: 30%;
+    background-image: url("../images/run.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+.card-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+.card-text h1{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+.card-text button{
+    padding: 10px 50px;
+    background-color: #E6533C;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.Training{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+.Training h1{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  gap: 10px;
+}
+
+.a {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.b {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+
+.c {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+.d {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.e {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.f {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+}
+
+
+.item {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+}
+.a { background-image: url("../images/exercise1.jpg"); }
+.b { background-image: url("../images/exercise2.png"); }
+.c { background-image: url("../images/exercise3.png"); }
+.d { background-image: url("../images/exercise4.png"); }
+.e { background-image: url("../images/exercise5.jpg"); }
+.f { background-image: url("../images/exercise6.jpg"); }
+
 
 @media screen and (max-width: 576px) {
     nav ul {
@@ -160,12 +297,31 @@ p {
     .banner {
         flex-direction: column;
     }
-    .banner-description{
+    .banner-description, .Habits{
         width: 100%;
     }
     .banner-img{
         width: 100%;
         margin: 0 auto;
+    }
+     .habits-img{
+        grid-template-columns: repeat(1, 4fr);
+        gap: 20px;
+    }
+     .run-card{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card-text{
+        width: 100%;
+    }
+    .card-img{
+        width: 100%;
+        height: 200px;
+    }
+    .card-text button{
+        padding: 10px 120px;
+        width: 100%;
     }
 }
 
@@ -173,11 +329,18 @@ p {
     .banner {
         flex-direction: column;
     }
-    .banner-description{
+    .banner-description, .Habits{
         width: 100%;
     }
-     .banner-img{
+     .banner-img, .Habits{
         width: 100%;
         margin: 0 auto;
+    }
+    .habits-img{
+        grid-template-columns: repeat(2, 2fr);
+        gap: 20px;
+    }
+    .card-img{
+        background-size: cover;
     }
 }
